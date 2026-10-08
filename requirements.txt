@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+lightgbm
+mlflow
+sqlalchemy
+psycopg2-binary
+dbt-core
+dbt-postgres
+python-dotenv
+pytest
+ruff
