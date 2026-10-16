@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: clientes
+        identifier: raw_clientes
+      - name: compras
+        identifier: raw_compras
+      - name: eventos
+        identifier: raw_eventos
