@@ -17,7 +17,7 @@ engine = create_engine(DB_URL) #SQLAlchemy cuida da conexão. não precisa abrir
 
 # Constantes do cenário
 N_CLIENTES = 1000
-DATA_HOJE = datetime(2026, 10, 9)  # ponto de referência pra calcular recência  # noqa: DTZ001
+DATA_HOJE = datetime(2026, 10, 9)  # ponto de referência pra calcular recência
 
 def gerar_clientes(n):
     clientes = []
