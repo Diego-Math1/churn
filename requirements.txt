@@ -10,3 +10,5 @@ dbt-postgres
 python-dotenv
 pytest
 ruff
+psycopg[binary]
+faker
