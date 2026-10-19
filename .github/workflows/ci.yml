@@ -59,7 +59,10 @@ jobs:
                 schema: public
                 threads: 4" > ~/.dbt/profiles.yml
 
-      - name: Rodar testes do dbt
+      - name: Popular banco com dados sintéticos (seed)
+        run: python ingestion/seed.py
+
+      - name: Rodar modelos e testes do dbt
         run: |
           cd dbt_project
           dbt build
