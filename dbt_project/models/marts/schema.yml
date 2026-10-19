@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_features_churn
+    description: "Tabela final consolidada com features de RFM, eventos e o target churn."
+    columns:
+      - name: id_cliente
+        tests:
+          - unique
+          - not_null
+      - name: churn
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]

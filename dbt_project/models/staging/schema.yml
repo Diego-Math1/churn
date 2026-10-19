@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_clientes
+    description: "Clientes limpos, vindos da tabela raw_clientes."
+    columns:
+      - name: id_cliente
+        tests:
+          - unique
+          - not_null
+      - name: plano
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['basico', 'padrao', 'premium']
