@@ -11,4 +11,5 @@ python-dotenv
 pytest
 ruff
 psycopg[binary]
-faker
+fakerfastapi
+uvicorn[standard]

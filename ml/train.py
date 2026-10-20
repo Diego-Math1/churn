@@ -149,13 +149,11 @@ def registrar_no_mlflow(modelo, metricas):
     """
     print("\n📦 Registrando experimento no MLflow...")
     
-    # Aponta para o servidor do MLflow (Docker)
     mlflow.set_tracking_uri(MLFLOW_URI)
     mlflow.set_experiment(EXPERIMENT_NAME)
 
-    # Abre um "run" no MLflow
     with mlflow.start_run():
-        # 1. Registra os parâmetros do modelo
+        # 1. Registra os parâmetros
         mlflow.log_param("n_estimators", 100)
         mlflow.log_param("max_depth", 10)
         mlflow.log_param("test_size", TEST_SIZE)
@@ -164,8 +162,13 @@ def registrar_no_mlflow(modelo, metricas):
         # 2. Registra as métricas
         mlflow.log_metrics(metricas)
 
-        # 3. Registra o modelo treinado em si
-        mlflow.sklearn.log_model(modelo, "random_forest_churn")
+        # 3. Registra o modelo E envia pro Model Registry
+        mlflow.sklearn.log_model(
+            modelo, 
+            "random_forest_churn",
+            registered_model_name="churn_classifier",
+            skops_trusted_types=["sklearn.tree._tree.Tree"]  # <--- Adicione esta linha
+        )
 
         print("   ✅ Experimento registrado com sucesso!")
         print(f"   🔗 Acesse: {MLFLOW_URI}")
