@@ -1,10 +1,12 @@
 import os
+
 import mlflow
 import mlflow.sklearn
 import pandas as pd
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from dotenv import load_dotenv
+
 
 load_dotenv()
 
