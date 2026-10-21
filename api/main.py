@@ -32,10 +32,10 @@ def carregar_modelo():
         print(f"Carregando modelo do MLflow (Run ID: {RUN_ID})...")
         #MODEL_URI = "models:/m-4cfd127ea5a14d3a99769578e752f74c" # Cole o valor do passo 1 aqui
         modelo = mlflow.sklearn.load_model("models:/churn_classifier/latest")
-        print("✅ Modelo carregado com sucesso!")
+        print(" Modelo carregado com sucesso!")
     except Exception as e:
-        print(f"❌ Erro ao carregar modelo: {e}")
-        raise e
+        print(f" Erro ao carregar modelo: {e}")
+        raise
 
 # Define o contrato de dados (o que a API espera receber)
 class ClienteInput(BaseModel):
