@@ -95,13 +95,21 @@ uvicorn api.main:app --reload
 ```
 Acesse a documentação interativa (Swagger UI) em: http://localhost:8000/docs
 
+## 📂 Estrutura do Repositório
+
 ```text
-├── .github/workflows/  # Pipeline de CI (Ruff + dbt test)
-├── api/                # API FastAPI para servir o modelo
-├── dbt_project/        # Modelagem SQL (Staging, Intermediate, Marts)
-├── ingestion/          # Script gerador de dados sintéticos
-├── ml/                 # Script de treino e registro no MLflow
-├── tests/              # Testes Python
-├── docker-compose.yml  # Orquestração do Postgres e MLflow
-└── requirements.txt    # Dependências do projeto
+├── .github/               # Workflows do GitHub Actions (CI)
+├── api/                   # Código da API (FastAPI) para servir o modelo
+├── dbt_project/           # Modelos SQL e configurações do dbt
+├── images/                # Screenshots do projeto (MLflow, Swagger)
+├── ingestion/             # Scripts de geração e carga de dados brutos
+├── logs/                  # Arquivos de log (não versionados no Git)
+├── ml/                    # Script de treinamento e registro do modelo
+├── .env.example           # Template de variáveis de ambiente
+├── .gitignore             # Arquivos e pastas ignorados pelo Git
+├── Makefile               # Atalhos para comandos (ex: make dbt, make train)
+├── README.md              # Documentação principal
+├── docker-compose.yml     # Orquestração da infraestrutura (Postgres e MLflow)
+├── pyproject.toml         # Configurações de ferramentas Python (Ruff, Pytest)
+└── requirements.txt       # Dependências do projeto
 ```
