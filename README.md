@@ -32,7 +32,7 @@ O pipeline foi desenhado seguindo as melhores práticas de engenharia, com separ
        │
        ▼
 [ FastAPI ] ──────────> Serving do modelo via API RESTful
-
+```
 🛠️ Tecnologias Utilizadas
 Infraestrutura: Docker, Docker Compose
 
