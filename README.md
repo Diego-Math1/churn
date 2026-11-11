@@ -1,6 +1,6 @@
 # 🛡️ Churn Prediction Pipeline
 
-![CI](https://github.com/Diego-Math1/projeto_sql/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/Diego-Math1/projeto_sql/actions/workflows/ci.yml/badge.svg)](https://github.com/Diego-Math1/projeto_sql/actions)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![dbt](https://img.shields.io/badge/dbt-1.12-orange)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-blue)
