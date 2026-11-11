@@ -24,3 +24,4 @@ dbt_project/.user.yml
 dbt_project/logs/
 dbt_project/dbt_packages/
 dbt_project/.user.yml
+logs/
